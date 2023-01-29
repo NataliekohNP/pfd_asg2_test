@@ -8,6 +8,6 @@ jobs:
     - name: Publish to docker
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        name: Docker Image CI
+        name: myDocker/repository
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
