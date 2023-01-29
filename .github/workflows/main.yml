@@ -8,6 +8,6 @@ jobs:
     - name: Publish to docker
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        name: pfd/asg2_test/publish.yml
+        name: Docker Image CI
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
