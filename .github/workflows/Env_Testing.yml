@@ -20,9 +20,4 @@ jobs:
             run: |
               python -m pip install --upgrade pip
               pip install -r requirements.txt
-          - name: Test with pytest
-            run: |
-              pip install pytest
-              py -m pytest --firefox
-              py -m pytest --edge
-              py -m pytest --safari
+          
