@@ -37,7 +37,6 @@ jobs:
       run: |
         seleniumbase install chromedriver
         seleniumbase install geckodriver
-        seleniumbase install safaridriver
     - name: Login_test is working
       run: |
         pytest tests/test_login.py --edge
