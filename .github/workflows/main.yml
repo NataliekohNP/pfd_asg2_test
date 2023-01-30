@@ -1,0 +1,13 @@
+name: Publish Docker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Publish to docker
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      with:
+        name: natkoh/testingprj_assignment2
+        username: natkoh
+        password: 29F483323v02
