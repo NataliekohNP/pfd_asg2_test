@@ -16,3 +16,9 @@ jobs:
             uses: actions/setup-python@v4
             with:
               python-version: '3.x'
+          - name: Test with pytest
+            run: |
+              pip install pytest
+              py -m pytest --firefox
+              py -m pytest --edge
+              py -m pytest --safari
