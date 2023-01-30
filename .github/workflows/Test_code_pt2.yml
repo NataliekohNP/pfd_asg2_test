@@ -37,13 +37,10 @@ jobs:
         python -m pip install --upgrade pip
         
     - name: Test with pytest
+      env:
+        pytest_github_report: true
+        pytest_report_title: ${{ matrix.os }}
       run: |
         pip install pytest
         pip install seleniumbase
         python -m pytest -n=4 --chrome -v
-        
-    - name: Report via Env
-      env:
-        pytest_github_report: true
-        pytest_report_title: ${{ matrix.os }}
-      run: pytest tests
