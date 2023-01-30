@@ -34,7 +34,7 @@ class loginTest(loginpage):
         self.save_screenshot("Successful_login", loginpage.custom_screenshot_dir +
                              "/test_login")
         print("Page should redirect")
-        self.assert_text("Products", "span.title")
+        self.assert_text("PRODUCTS", "span.title")
         print("results : ")
         print("user is being redirected")
         print("test is successful")
