@@ -44,7 +44,6 @@ jobs:
     - name: Test chrome with pytest
       run: |
         python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html --screenshot
-        file:///home/runner/work/pfd_asg2_test/pfd_asg2_test/report_chrome.html
         
       continue-on-error: true
       
