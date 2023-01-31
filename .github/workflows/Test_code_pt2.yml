@@ -44,7 +44,7 @@ jobs:
 
     - name: Test chrome with pytest
       run: |
-        python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html --screenshots --self-contained-html
+        python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html --self-contained-html
       continue-on-error: true
       
     - name: Test firefox with pytest
