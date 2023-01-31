@@ -43,11 +43,11 @@ jobs:
 
     - name: Test chrome with pytest
       run: |
-        python -m pytest -n=4 --chrome -v --md-report --
+        python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html
       continue-on-error: true
       
     - name: Test linux with pytest
       run: |
         seleniumbase install geckodriver
-        python -m pytest -n=4 --firefox -v --md-report --
+        python -m pytest -n=4 --firefox -v --md-report 
       continue-on-error: true
