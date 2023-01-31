@@ -46,7 +46,7 @@ jobs:
         python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html
       continue-on-error: true
       
-    - name: Test linux with pytest
+    - name: Test firefox with pytest
       run: |
         seleniumbase install geckodriver
         python -m pytest -n=4 --firefox -v --md-report 
