@@ -26,12 +26,14 @@ jobs:
     steps:
     - name: Check out repo
       uses: actions/checkout@v3
-
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-        token: ${{ secrets.PAT }}
+        
 
     - name: Install dependencies
       run: |
