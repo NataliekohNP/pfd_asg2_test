@@ -31,7 +31,7 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.PAT }}
 
     - name: Install dependencies
       run: |
@@ -47,7 +47,6 @@ jobs:
         python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html --screenshot
         git config --global user.name 'NataliekohNP'
         git config --global user.email 's10227870@connect.np.edu.sg'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git add -A
         git commit -am "Automated report"
         git push
