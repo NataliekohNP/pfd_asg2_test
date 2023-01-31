@@ -38,6 +38,7 @@ jobs:
         pip install pytest
         pip install seleniumbase
         pip install pytest-md-report
+        pip install pytest-cov
         
     - name: Test with pytest
       run: |
