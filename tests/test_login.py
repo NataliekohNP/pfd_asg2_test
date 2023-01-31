@@ -1,8 +1,9 @@
 from page_objects.login_page import loginpage
 class loginTest(loginpage):
+
     def setUp(self,masterqa_mode=False):
         super().setUp()
-        self.open_page()
+        self.open("https://www.saucedemo.com/")
 
     # Test case 1 : unsuccessful login(wrong email)
     def test_login_wrong(self):

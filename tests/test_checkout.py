@@ -12,7 +12,7 @@ class checkout_Test(checkoutpage):
         self.click("button#checkout")
 
 
-    def checkout_unsuccessful_firstnameblank(self):
+    def test_checkout_unsuccessful_firstnameblank(self):
         print("Test case : checkout first name leave blank")
         print("1. Enter last name : 'automation'")
         self.type(checkoutpage.input_lastname, checkoutpage.lastname)
@@ -21,7 +21,7 @@ class checkout_Test(checkoutpage):
         print("3. Click continue")
         self.click("input#continue")
         print("Error message should appear")
-        self.assert_text("Error: First Name is required", "button.error-button")
+        self.assert_text("Error: First Name is required", "h3")
         self.save_screenshot("checkout_firstname_error",
                              checkoutpage.custom_screenshot_dir +
                              "/test_checkout_product")
@@ -30,7 +30,7 @@ class checkout_Test(checkoutpage):
         print("test is successful")
         self.save_screenshot_to_logs()
 
-    def checkout_unsuccessful_lastnameblank(self):
+    def test_checkout_unsuccessful_lastnameblank(self):
         print("Test case : checkout last name leave blank")
         print("1. Enter first name : 'seleniumbase'")
         self.type(checkoutpage.input_firstname, checkoutpage.firstname)
@@ -39,7 +39,7 @@ class checkout_Test(checkoutpage):
         print("3. Click continue")
         self.click("input#continue")
         print("Error message should appear")
-        self.assert_text("Error: Last Name is required", "button.error-button")
+        self.assert_text("Error: Last Name is required", "h3")
         self.save_screenshot("checkout_lastname_error",
                              checkoutpage.custom_screenshot_dir +
                              "/test_checkout_product")
@@ -48,7 +48,7 @@ class checkout_Test(checkoutpage):
         print("test is successful")
         self.save_screenshot_to_logs()
 
-    def checkout_unsuccessful_postalcodeblank(self):
+    def test_checkout_unsuccessful_postalcodeblank(self):
         print("Test case : checkout postal code leave blank")
         print("1. Enter first name : 'seleniumbase'")
         self.type(checkoutpage.input_firstname, checkoutpage.firstname)
@@ -57,7 +57,7 @@ class checkout_Test(checkoutpage):
         print("3. Click continue")
         self.click("input#continue")
         print("Error message should appear")
-        self.assert_text("Error: Postal Code is required", "button.error-button")
+        self.assert_text("Error: Postal Code is required", "h3")
         self.save_screenshot("checkout_postalcode_error",
                              checkoutpage.custom_screenshot_dir +
                              "/test_checkout_product")
@@ -66,7 +66,7 @@ class checkout_Test(checkoutpage):
         print("test is successful")
         self.save_screenshot_to_logs()
 
-    def checkout_successful(self):
+    def test_checkout_successful(self):
         print("Test case : checkout successful")
         print("1. Enter first name : 'seleniumbase'")
         self.type(checkoutpage.input_firstname, checkoutpage.firstname)
