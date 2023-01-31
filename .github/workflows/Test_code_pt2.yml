@@ -39,11 +39,12 @@ jobs:
         pip install pytest
         pip install seleniumbase
         pip install pytest-md-report
+        pip install pytest-html
         
 
     - name: Test chrome with pytest
       run: |
-        python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html
+        python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html --screenshots --self-contained-html
       continue-on-error: true
       
     - name: Test firefox with pytest
