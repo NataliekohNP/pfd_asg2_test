@@ -33,11 +33,12 @@ class addtocart_Test(loginpage):
         self.click("#shopping_cart_container a")
         print("3. delete item from cart")
         self.click("button#remove-sauce-labs-backpack")
-        print("4. click 'continue shopping' button")
-        self.click("button#continue-shopping")
         self.save_screenshot("delete_from_tocart",
                              loginpage.custom_screenshot_dir +
                              "/test_addtocart_product")
+        print("4. click 'continue shopping' button")
+        self.click("button#continue-shopping")
+
         self.assert_text("ADD TO CART","button#add-to-cart-sauce-labs-backpack")
         print("Results : ")
         print("The button should change from 'REMOVE ITEM' to 'ADD TO CART'")
