@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python application
+name: Testing on Linux
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         python-version: ["3.10"]
 
     runs-on: ${{matrix.os}}
@@ -44,16 +44,18 @@ jobs:
         
     - name: Test chrome with pytest
       run: |
-        python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html --screenshot
-        git config --global user.name NataliekohNP
-        git config --global user.email S10227870@connect.np.edu.sg
-        git add -A
-        git commit -am "Automated report"
-        git push
+        python -m pytest -n=4 --chrome -v --md-report --html=report_chrome_linux.html --screenshot
       continue-on-error: true
       
     - name: Test firefox with pytest
       run: |
         seleniumbase install geckodriver
-        python -m pytest -n=4 --firefox -v --md-report 
+        python -m pytest -n=4 --firefox -v --md-report --html=report_firefox_linux.html --screenshot 
       continue-on-error: true
+    - name: pushing files to github
+      run: |
+        git config --global user.name NataliekohNP
+        git config --global user.email S10227870@connect.np.edu.sg
+        git add -A
+        git commit -am "Automated report"
+        git push
