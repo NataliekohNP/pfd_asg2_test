@@ -25,7 +25,7 @@ jobs:
 
     steps:
     - name: Check out repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         
@@ -42,15 +42,12 @@ jobs:
         pip install pytest
         pip install seleniumbase
         pip install pytest-md-report
-
-
+        
     - name: Test chrome with pytest
       run: |
         python -m pytest -n=4 --chrome -v --md-report --html=report_chrome.html --screenshot
-        git config --global user.name 'NataliekohNP'
-        git config --global user.email 'S10227870@connect.np.edu.sg'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-        git checkout "${GITHUB_REF:11}"
+        git config --global user.name NataliekohNP
+        git config --global user.email S10227870@connect.np.edu.sg
         git add -A
         git commit -am "Automated report"
         git push
