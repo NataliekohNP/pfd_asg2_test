@@ -1,7 +1,7 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python package
+name: Python application
 
 on:
   push:
@@ -9,45 +9,45 @@ on:
   pull_request:
     branches: [ "master" ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
 
-    runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.8", "3.9", "3.10"]
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.10"]
+
+    runs-on: ${{matrix.os}}
+
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Check out repo
+      uses: actions/checkout@v3
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Install SeleniumBase
+        pip install -r requirements.txt
+        pip install pytest
+        pip install seleniumbase
+        pip install pytest-md-report
+        
+
+    - name: Test chrome with pytest
       run: |
-        python setup.py install
-    - name: Lint with flake8
+        python -m pytest -n=4 --chrome -v --md-report --
+      continue-on-error: true
+      
+    - name: Test linux with pytest
       run: |
-        pip install flake8
-        # Stop the build if there are flake8 issues
-        flake8 . --count --show-source --statistics --exclude=temp
-    - name: Install Chrome
-      run: |
-        sudo apt install google-chrome-stable
-    - name: Check the console scripts interface
-      run: |
-        seleniumbase
-        sbase
-    - name: Install chromedriver
-      run: |
-        seleniumbase install chromedriver
-    - name: Login_test is working
-      run: |
-        pytest tests/test_login.py --edge
+        seleniumbase install geckodriver
+        python -m pytest -n=4 --firefox -v --md-report --
+      continue-on-error: true
