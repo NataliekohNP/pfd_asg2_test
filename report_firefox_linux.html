@@ -241,7 +241,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report_firefox_linux.html</h1>
-    <p>Report generated on 31-Jan-2023 at 10:38:50 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.0.1</p>
+    <p>Report generated on 31-Jan-2023 at 11:04:09 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.0.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -263,8 +263,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.10.9</td></tr></table>
     <h2>Summary</h2>
-    <p>8 tests ran in 32.67 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">7 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>8 tests ran in 35.04 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -275,33 +275,11 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_successful</td>
-          <td class="col-duration">19.23</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw0] linux -- Python 3.10.9 /opt/hostedtoolcache/Python/3.10.9/x64/bin/python<br/><br/>self = &lt;test_checkout.checkout_Test testMethod=test_checkout_successful&gt;<br/><br/>    def test_checkout_successful(self):<br/>        print(&quot;Test case : checkout successful&quot;)<br/>        print(&quot;1. Enter first name : &#x27;seleniumbase&#x27;&quot;)<br/>        self.type(checkoutpage.input_firstname, checkoutpage.firstname)<br/>        print(&quot;2. Enter last name : &#x27;automation&#x27;&quot;)<br/>        self.type(checkoutpage.input_lastname, checkoutpage.lastname)<br/>        print(&quot;3. Enter postal code : &#x27;77123&#x27;&quot;)<br/>        self.type(checkoutpage.input_postalcode, checkoutpage.postalcode)<br/>        print(&quot;4. Click continue&quot;)<br/>        self.click(&quot;input#continue&quot;)<br/>        print(&quot;5. the user should be redirected to a next page&quot;)<br/>        self.assert_text(&quot;CHECKOUT: OVERVIEW&quot;)<br/>        print(&quot;6. Item is displayed in the page&quot;)<br/>        self.assert_text(&quot;Backpack&quot;, &quot;div.cart_item&quot;)<br/>        print(&quot;7. Click finish&quot;)<br/>        self.click(&quot;button#finish&quot;)<br/>        print(&quot;8. Thank you message should appear&quot;)<br/>        self.assert_exact_text(&quot;THANK YOU FOR YOUR ORDER&quot;, &quot;h2&quot;)<br/>        self.save_screenshot(&quot;checkout_successful&quot;,<br/>                             checkoutpage.custom_screenshot_dir +<br/>                             &quot;/test_checkout_product&quot;)<br/>        print(&quot;Results :&quot;)<br/>        print(&quot;Thank you message appeared&quot;)<br/>        print(&quot;test is successful&quot;)<br/>&gt;       self.save_screenshot_to_logs()<br/><br/>tests/test_checkout.py:93: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py:3580: in save_screenshot_to_logs<br/>    self.wait_for_ready_state_complete()<br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py:3723: in wait_for_ready_state_complete<br/>    self.__check_browser()<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;test_checkout.checkout_Test testMethod=test_checkout_successful&gt;<br/><br/>    def __check_browser(self):<br/>        &quot;&quot;&quot;This method raises an exception if the window was already closed.&quot;&quot;&quot;<br/>        active_window = None<br/>        try:<br/>            active_window = self.driver.current_window_handle  # Fails if None<br/>        except Exception:<br/>            pass<br/>        if not active_window:<br/>&gt;           raise NoSuchWindowException(&quot;Active window was already closed!&quot;)<br/><span class="error">E           selenium.common.exceptions.NoSuchWindowException: Message: Active window was already closed!</span><br/><br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py:11803: NoSuchWindowException<br/> ------------------------------Captured stdout call------------------------------ <br/>Test case : checkout successful
-1. Enter first name : &#x27;seleniumbase&#x27;
-2. Enter last name : &#x27;automation&#x27;
-3. Enter postal code : &#x27;77123&#x27;
-4. Click continue
-5. the user should be redirected to a next page
-6. Item is displayed in the page
-7. Click finish
-8. Thank you message should appear
-Results :
-Thank you message appeared
-test is successful
-WARNING: Unable to get screenshot!
-<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_addtocart.py::addtocart_Test::test_addtocart</td>
-          <td class="col-duration">19.17</td>
+          <td class="col-duration">15.23</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/cart.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_addtocart.py__addtocart_Test__test_addtocart_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -317,7 +295,7 @@ test is successful
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::loginTest::test_login_correct</td>
-          <td class="col-duration">19.18</td>
+          <td class="col-duration">15.61</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/inventory.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_login.py__loginTest__test_login_correct_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -334,7 +312,7 @@ test is successful
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_unsuccessful_lastnameblank</td>
-          <td class="col-duration">19.44</td>
+          <td class="col-duration">16.74</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-step-one.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_lastnameblank_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -351,8 +329,30 @@ test is successful
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_successful</td>
+          <td class="col-duration">18.03</td>
+          <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-complete.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_successful_1_0.png" target="_blank">Screenshot</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="assets/tests_test_checkout.py__checkout_Test__test_checkout_successful_1_0.png"><img src="assets/tests_test_checkout.py__checkout_Test__test_checkout_successful_1_0.png"/></a></div>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Test case : checkout successful
+1. Enter first name : &#x27;seleniumbase&#x27;
+2. Enter last name : &#x27;automation&#x27;
+3. Enter postal code : &#x27;77123&#x27;
+4. Click continue
+5. the user should be redirected to a next page
+6. Item is displayed in the page
+7. Click finish
+8. Thank you message should appear
+Results :
+Thank you message appeared
+test is successful
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::loginTest::test_login_wrong</td>
-          <td class="col-duration">9.90</td>
+          <td class="col-duration">13.72</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/" target="_blank">URL</a> <a class="image" href="assets/tests_test_login.py__loginTest__test_login_wrong_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -368,7 +368,7 @@ test is successful
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_addtocart.py::addtocart_Test::test_delete_cart</td>
-          <td class="col-duration">10.82</td>
+          <td class="col-duration">15.15</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/inventory.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_addtocart.py__addtocart_Test__test_delete_cart_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -386,7 +386,7 @@ test is successful
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_unsuccessful_postalcodeblank</td>
-          <td class="col-duration">11.17</td>
+          <td class="col-duration">14.83</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-step-one.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_postalcodeblank_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -404,7 +404,7 @@ test is successful
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_unsuccessful_firstnameblank</td>
-          <td class="col-duration">11.40</td>
+          <td class="col-duration">14.90</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-step-one.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_firstnameblank_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
