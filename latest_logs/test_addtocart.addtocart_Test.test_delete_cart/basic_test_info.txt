@@ -1,0 +1,31 @@
+tests/test_addtocart.py::addtocart_Test::test_delete_cart
+--------------------------------------------------------------------
+Last Page: [WARNING! Browser Not Open!]
+ Duration: 2.52s
+  Browser: Firefox 109.0 / headless
+   Driver: geckodriver 0.32.0
+Timestamp: 1675175267  (Unix Timestamp)
+     Date: Tuesday, 31 January 2023
+     Time: 2:27:47 PM  (UTC, UTC+00)
+--------------------------------------------------------------------
+Traceback: File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/unittest/case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/unittest/case.py", line 549, in _callTestMethod
+    method()
+  File "/home/runner/work/pfd_asg2_test/pfd_asg2_test/tests/test_addtocart.py", line 36, in test_delete_cart
+    self.save_screenshot("delete_from_tocart",
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py", line 3567, in save_screenshot
+    return page_actions.save_screenshot(self.driver, name, folder)
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/page_actions.py", line 1095, in save_screenshot
+    driver.get_screenshot_as_file(screenshot_path)
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 927, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 963, in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 975, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+Exception: Message: Failed to decode response from marionette
