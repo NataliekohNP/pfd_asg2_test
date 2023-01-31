@@ -241,7 +241,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report_firefox_linux.html</h1>
-    <p>Report generated on 31-Jan-2023 at 11:34:11 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.0.1</p>
+    <p>Report generated on 31-Jan-2023 at 12:29:54 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.0.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -263,8 +263,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.10.9</td></tr></table>
     <h2>Summary</h2>
-    <p>8 tests ran in 38.49 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>8 tests ran in 35.69 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">7 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -275,27 +275,29 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_addtocart.py::addtocart_Test::test_addtocart</td>
-          <td class="col-duration">22.37</td>
-          <td class="col-links"><a class="url" href="https://www.saucedemo.com/cart.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_addtocart.py__addtocart_Test__test_addtocart_1_0.png" target="_blank">Screenshot</a> </td></tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_successful</td>
+          <td class="col-duration">20.77</td>
+          <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="assets/tests_test_addtocart.py__addtocart_Test__test_addtocart_1_0.png"><img src="assets/tests_test_addtocart.py__addtocart_Test__test_addtocart_1_0.png"/></a></div>
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Test case : add to cart successful
-1. click on first item with backpack
-2. check the cart for previously added item
-Results: 
-Cart has the previously added item
-test is successful
+            <div class="log">[gw1] linux -- Python 3.10.9 /opt/hostedtoolcache/Python/3.10.9/x64/bin/python<br/><br/>self = &lt;test_checkout.checkout_Test testMethod=test_checkout_successful&gt;<br/>selector = &#x27;button#finish&#x27;, by = &#x27;css selector&#x27;, timeout = 7, delay = 0<br/>scroll = True<br/><br/>    def click(<br/>        self, selector, by=&quot;css selector&quot;, timeout=None, delay=0, scroll=True<br/>    ):<br/>        self.__check_scope()<br/>        if not timeout:<br/>            timeout = settings.SMALL_TIMEOUT<br/>        if self.timeout_multiplier and timeout == settings.SMALL_TIMEOUT:<br/>            timeout = self.__get_new_timeout(timeout)<br/>        original_selector = selector<br/>        original_by = by<br/>        selector, by = self.__recalculate_selector(selector, by)<br/>        if delay and (type(delay) in [int, float]) and delay &gt; 0:<br/>            time.sleep(delay)<br/>        if page_utils.is_link_text_selector(selector) or by == By.LINK_TEXT:<br/>            if not self.is_link_text_visible(selector):<br/>                # Handle a special case of links hidden in dropdowns<br/>                self.click_link_text(selector, timeout=timeout)<br/>                return<br/>        if (<br/>            page_utils.is_partial_link_text_selector(selector)<br/>            or by == By.PARTIAL_LINK_TEXT<br/>        ):<br/>            if not self.is_partial_link_text_visible(selector):<br/>                # Handle a special case of partial links hidden in dropdowns<br/>                self.click_partial_link_text(selector, timeout=timeout)<br/>                return<br/>        if self.__is_shadow_selector(selector):<br/>            self.__shadow_click(selector, timeout)<br/>            return<br/>        element = page_actions.wait_for_element_visible(<br/>            self.driver,<br/>            selector,<br/>            by,<br/>            timeout=timeout,<br/>            original_selector=original_selector,<br/>        )<br/>        self.__demo_mode_highlight_if_active(original_selector, original_by)<br/>        if scroll and not self.demo_mode and not self.slow_mode:<br/>            self.__scroll_to_element(element, selector, by)<br/>        pre_action_url = self.driver.current_url<br/>        pre_window_count = len(self.driver.window_handles)<br/>        try:<br/>            if (<br/>                by == By.LINK_TEXT<br/>                and (<br/>                    self.browser == &quot;ie&quot; or self.browser == &quot;safari&quot;<br/>                )<br/>            ):<br/>                self.__jquery_click(selector, by=by)<br/>            else:<br/>                href = None<br/>                new_tab = False<br/>                onclick = None<br/>                try:<br/>                    if self.headless and element.tag_name.lower() == &quot;a&quot;:<br/>                        # Handle a special case of opening a new tab (headless)<br/>                        href = element.get_attribute(&quot;href&quot;).strip()<br/>                        onclick = element.get_attribute(&quot;onclick&quot;)<br/>                        target = element.get_attribute(&quot;target&quot;)<br/>                        if target == &quot;_blank&quot;:<br/>                            new_tab = True<br/>                        if new_tab and self.__looks_like_a_page_url(href):<br/>                            if onclick:<br/>                                try:<br/>                                    self.execute_script(onclick)<br/>                                except Exception:<br/>                                    pass<br/>                            current_window = self.driver.current_window_handle<br/>                            self.open_new_window()<br/>                            try:<br/>                                self.open(href)<br/>                            except Exception:<br/>                                pass<br/>                            self.switch_to_window(current_window)<br/>                            return<br/>                except Exception:<br/>                    pass<br/>                # Normal click<br/>&gt;               element.click()<br/><br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py:334: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9764b7c2-3d17-42f1-83ba-a785186ee2a8&quot;, element=&quot;621da227-7b79-418c-b7e7-9987a7bf952b&quot;)&gt;<br/><br/>    def click(self) -&gt; None:<br/>        &quot;&quot;&quot;Clicks the element.&quot;&quot;&quot;<br/>&gt;       self._execute(Command.CLICK_ELEMENT)<br/><br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py:88: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9764b7c2-3d17-42f1-83ba-a785186ee2a8&quot;, element=&quot;621da227-7b79-418c-b7e7-9987a7bf952b&quot;)&gt;<br/>command = &#x27;clickElement&#x27;<br/>params = {&#x27;id&#x27;: &#x27;621da227-7b79-418c-b7e7-9987a7bf952b&#x27;, &#x27;sessionId&#x27;: &#x27;9764b7c2-3d17-42f1-83ba-a785186ee2a8&#x27;}<br/><br/>    def _execute(self, command, params=None):<br/>        &quot;&quot;&quot;Executes a command against the underlying HTML element.<br/>    <br/>        Args:<br/>          command: The name of the command to _execute as a string.<br/>          params: A dictionary of named parameters to send with the command.<br/>    <br/>        Returns:<br/>          The command&#x27;s JSON response loaded into a dictionary object.<br/>        &quot;&quot;&quot;<br/>        if not params:<br/>            params = {}<br/>        params[&#x27;id&#x27;] = self._id<br/>&gt;       return self._parent.execute(command, params)<br/><br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py:396: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;9764b7c2-3d17-42f1-83ba-a785186ee2a8&quot;)&gt;<br/>driver_command = &#x27;clickElement&#x27;<br/>params = {&#x27;id&#x27;: &#x27;621da227-7b79-418c-b7e7-9987a7bf952b&#x27;}<br/><br/>    def execute(self, driver_command: str, params: dict = None) -&gt; dict:<br/>        &quot;&quot;&quot;<br/>        Sends a command to be executed by a command.CommandExecutor.<br/>    <br/>        :Args:<br/>         - driver_command: The name of the command to execute as a string.<br/>         - params: A dictionary of named parameters to send with the command.<br/>    <br/>        :Returns:<br/>          The command&#x27;s JSON response loaded into a dictionary object.<br/>        &quot;&quot;&quot;<br/>        if self.session_id:<br/>            if not params:<br/>                params = {&#x27;sessionId&#x27;: self.session_id}<br/>            elif &#x27;sessionId&#x27; not in params:<br/>                params[&#x27;sessionId&#x27;] = self.session_id<br/>    <br/>        params = self._wrap_value(params)<br/>        response = self.command_executor.execute(driver_command, params)<br/>        if response:<br/>&gt;           self.error_handler.check_response(response)<br/><br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:429: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fd366b08790&gt;<br/>response = {&#x27;status&#x27;: 500, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;unknown error&quot;,&quot;message&quot;:&quot;Failed to decode response from marionette&quot;,&quot;stacktrace&quot;:&quot;&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;<br/>        Checks that a JSON response from the WebDriver does not have an error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&#x27;status&#x27;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&#x27;value&#x27;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&#x27;value&#x27;]<br/>                    status = value.get(&#x27;error&#x27;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&#x27;message&#x27;)<br/>                    else:<br/>                        message = value.get(&#x27;message&#x27;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif status in ErrorCode.INVALID_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&#x27;value&#x27;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &#x27;message&#x27; in value:<br/>            message = value[&#x27;message&#x27;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &#x27;screen&#x27; in value:<br/>            screen = value[&#x27;screen&#x27;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&#x27;stackTrace&#x27;) or value.get(&#x27;stacktrace&#x27;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&#x27;\n&#x27;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get(&quot;lineNumber&quot;, &quot;&quot;)<br/>                        file = frame.get(&quot;fileName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if line:<br/>                            file = f&quot;{file}:{line}&quot;<br/>                        meth = frame.get(&#x27;methodName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if &#x27;className&#x27; in frame:<br/>                            meth = &quot;{}.{}&quot;.format(frame[&#x27;className&#x27;], meth)<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &#x27;data&#x27; in value:<br/>                alert_text = value[&#x27;data&#x27;].get(&#x27;text&#x27;)<br/>            elif &#x27;alert&#x27; in value:<br/>                alert_text = value[&#x27;alert&#x27;].get(&#x27;text&#x27;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.WebDriverException: Message: Failed to decode response from marionette</span><br/><br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:243: WebDriverException<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;test_checkout.checkout_Test testMethod=test_checkout_successful&gt;<br/><br/>    def test_checkout_successful(self):<br/>        print(&quot;Test case : checkout successful&quot;)<br/>        print(&quot;1. Enter first name : &#x27;seleniumbase&#x27;&quot;)<br/>        self.type(checkoutpage.input_firstname, checkoutpage.firstname)<br/>        print(&quot;2. Enter last name : &#x27;automation&#x27;&quot;)<br/>        self.type(checkoutpage.input_lastname, checkoutpage.lastname)<br/>        print(&quot;3. Enter postal code : &#x27;77123&#x27;&quot;)<br/>        self.type(checkoutpage.input_postalcode, checkoutpage.postalcode)<br/>        print(&quot;4. Click continue&quot;)<br/>        self.click(&quot;input#continue&quot;)<br/>        print(&quot;5. the user should be redirected to a next page&quot;)<br/>        self.assert_text(&quot;CHECKOUT: OVERVIEW&quot;)<br/>        print(&quot;6. Item is displayed in the page&quot;)<br/>        self.assert_text(&quot;Backpack&quot;, &quot;div.cart_item&quot;)<br/>        print(&quot;7. Click finish&quot;)<br/>&gt;       self.click(&quot;button#finish&quot;)<br/><br/>tests/test_checkout.py:84: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py:422: in click<br/>    self.wait_for_ready_state_complete()<br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py:3723: in wait_for_ready_state_complete<br/>    self.__check_browser()<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;test_checkout.checkout_Test testMethod=test_checkout_successful&gt;<br/><br/>    def __check_browser(self):<br/>        &quot;&quot;&quot;This method raises an exception if the window was already closed.&quot;&quot;&quot;<br/>        active_window = None<br/>        try:<br/>            active_window = self.driver.current_window_handle  # Fails if None<br/>        except Exception:<br/>            pass<br/>        if not active_window:<br/>&gt;           raise NoSuchWindowException(&quot;Active window was already closed!&quot;)<br/><span class="error">E           selenium.common.exceptions.NoSuchWindowException: Message: Active window was already closed!</span><br/><br/>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/seleniumbase/fixtures/base_case.py:11803: NoSuchWindowException<br/> ------------------------------Captured stdout call------------------------------ <br/>Test case : checkout successful
+1. Enter first name : &#x27;seleniumbase&#x27;
+2. Enter last name : &#x27;automation&#x27;
+3. Enter postal code : &#x27;77123&#x27;
+4. Click continue
+5. the user should be redirected to a next page
+6. Item is displayed in the page
+7. Click finish
+WARNING: Unable to get screenshot!
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::loginTest::test_login_correct</td>
-          <td class="col-duration">22.39</td>
+          <td class="col-duration">20.34</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/inventory.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_login.py__loginTest__test_login_correct_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -311,8 +313,24 @@ test is successful
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_addtocart.py::addtocart_Test::test_addtocart</td>
+          <td class="col-duration">20.71</td>
+          <td class="col-links"><a class="url" href="https://www.saucedemo.com/cart.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_addtocart.py__addtocart_Test__test_addtocart_1_0.png" target="_blank">Screenshot</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="assets/tests_test_addtocart.py__addtocart_Test__test_addtocart_1_0.png"><img src="assets/tests_test_addtocart.py__addtocart_Test__test_addtocart_1_0.png"/></a></div>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Test case : add to cart successful
+1. click on first item with backpack
+2. check the cart for previously added item
+Results: 
+Cart has the previously added item
+test is successful
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_unsuccessful_lastnameblank</td>
-          <td class="col-duration">23.90</td>
+          <td class="col-duration">21.01</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-step-one.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_lastnameblank_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -329,30 +347,8 @@ test is successful
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_successful</td>
-          <td class="col-duration">24.14</td>
-          <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-complete.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_successful_1_0.png" target="_blank">Screenshot</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="image"><a href="assets/tests_test_checkout.py__checkout_Test__test_checkout_successful_1_0.png"><img src="assets/tests_test_checkout.py__checkout_Test__test_checkout_successful_1_0.png"/></a></div>
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Test case : checkout successful
-1. Enter first name : &#x27;seleniumbase&#x27;
-2. Enter last name : &#x27;automation&#x27;
-3. Enter postal code : &#x27;77123&#x27;
-4. Click continue
-5. the user should be redirected to a next page
-6. Item is displayed in the page
-7. Click finish
-8. Thank you message should appear
-Results :
-Thank you message appeared
-test is successful
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::loginTest::test_login_wrong</td>
-          <td class="col-duration">11.15</td>
+          <td class="col-duration">10.95</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/" target="_blank">URL</a> <a class="image" href="assets/tests_test_login.py__loginTest__test_login_wrong_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -368,7 +364,7 @@ test is successful
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_addtocart.py::addtocart_Test::test_delete_cart</td>
-          <td class="col-duration">11.54</td>
+          <td class="col-duration">11.94</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/inventory.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_addtocart.py__addtocart_Test__test_delete_cart_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -385,26 +381,8 @@ test is successful
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_unsuccessful_firstnameblank</td>
-          <td class="col-duration">12.47</td>
-          <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-step-one.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_firstnameblank_1_0.png" target="_blank">Screenshot</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="image"><a href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_firstnameblank_1_0.png"><img src="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_firstnameblank_1_0.png"/></a></div>
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Test case : checkout first name leave blank
-1. Enter last name : &#x27;automation&#x27;
-2. Enter postal code : &#x27;77123&#x27;
-3. Click continue
-Error message should appear
-Results : 
-Error message : &#x27;first name is required&#x27; appeared
-test is successful
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
           <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_unsuccessful_postalcodeblank</td>
-          <td class="col-duration">12.84</td>
+          <td class="col-duration">12.66</td>
           <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-step-one.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_postalcodeblank_1_0.png" target="_blank">Screenshot</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -416,5 +394,23 @@ test is successful
 Error message should appear
 Results : 
 Error message : &#x27;Postal code is required&#x27; appeared
+test is successful
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_checkout.py::checkout_Test::test_checkout_unsuccessful_firstnameblank</td>
+          <td class="col-duration">12.17</td>
+          <td class="col-links"><a class="url" href="https://www.saucedemo.com/checkout-step-one.html" target="_blank">URL</a> <a class="image" href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_firstnameblank_1_0.png" target="_blank">Screenshot</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_firstnameblank_1_0.png"><img src="assets/tests_test_checkout.py__checkout_Test__test_checkout_unsuccessful_firstnameblank_1_0.png"/></a></div>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Test case : checkout first name leave blank
+1. Enter last name : &#x27;automation&#x27;
+2. Enter postal code : &#x27;77123&#x27;
+3. Click continue
+Error message should appear
+Results : 
+Error message : &#x27;first name is required&#x27; appeared
 test is successful
 <br/></div></td></tr></tbody></table></body></html>
