@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: ["3.10"]
 
     runs-on: ${{matrix.os}}
@@ -39,8 +39,18 @@ jobs:
         pip install pytest
         pip install seleniumbase
         pip install pytest-md-report
+        
 
-    - name: Test with pytest
+    - name: Test chrome with pytest
       run: |
-        python -m pytest -n=4 --chrome -v --md-report
+        python -m pytest -n=4 --chrome -v --md-report --
       continue-on-error: true
+      
+    - name: Test linux with pytest
+      run: |
+        seleniumbase install geckodriver
+        python -m pytest -n=4 --firefox -v --md-report --
+      continue-on-error: true
+    - name: Test Mac with pytest
+      run: |
+        python -m pytest -n=4 --safari -v --md-report --
